@@ -9,7 +9,7 @@ const TodoList = ({ todolist, toggleDone, deleteTodo }) => {
                 toggleDone={toggleDone} />
         )
     })
-
+    console.log("### TodoList Rendered!!")
     return (
         <div className="row">
             <ul className="list-group">
@@ -26,4 +26,5 @@ TodoList.propTypes = {
     deleteTodo : PropTypes.func.isRequired
 }
 
-export default TodoList;
+const MemoizedTodoList = React.memo(TodoList)
+export default MemoizedTodoList;

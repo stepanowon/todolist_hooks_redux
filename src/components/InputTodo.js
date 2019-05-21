@@ -8,7 +8,6 @@ const InputTodo = ({ addTodo }) => {
         addTodo(todo);
         setTodo('');
     }
-
     return (
         <div className="row">
             <div className="col">
@@ -28,4 +27,5 @@ InputTodo.propTypes = {
     addTodo : PropTypes.func.isRequired
 };
 
-export default InputTodo;
+const MemoizedInputTodo = React.memo(InputTodo)
+export default MemoizedInputTodo;

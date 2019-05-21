@@ -24,5 +24,5 @@ TodoItem.propTypes = {
     toggleDone : PropTypes.func.isRequired,
     deleteTodo : PropTypes.func.isRequired
 };
-
-export default TodoItem;
+const MemoizedTodoItem = React.memo(TodoItem)
+export default MemoizedTodoItem;

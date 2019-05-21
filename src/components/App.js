@@ -32,4 +32,5 @@ App.propTypes = {
     currentTime: PropTypes.object.isRequired
 }
 
-export default App;
+const MemoizedApp = React.memo(App)
+export default MemoizedApp;
