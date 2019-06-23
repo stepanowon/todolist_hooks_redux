@@ -9,7 +9,6 @@ const TodoList = ({ todolist, toggleDone, deleteTodo }) => {
                 toggleDone={toggleDone} />
         )
     })
-    console.log("### TodoList Rendered!!")
     return (
         <div className="row">
             <ul className="list-group">

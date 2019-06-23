@@ -1,10 +1,9 @@
 import React from 'react';
 import InputTodo from './InputTodo';
 import TodoList from './TodoList';
-import MyTime from './MyTime';
 import PropTypes from 'prop-types';
 
-const App = ({todolist, addTodo, deleteTodo, toggleDone, changeTime, currentTime }) => {
+const App = ({todolist, addTodo, deleteTodo, toggleDone }) => {
     return (
         <div className="container">
             <div className="well">
@@ -17,8 +16,6 @@ const App = ({todolist, addTodo, deleteTodo, toggleDone, changeTime, currentTime
                         toggleDone={toggleDone} deleteTodo={deleteTodo}/>
                 </div>
             </div>
-            <MyTime changeTime={changeTime} 
-                currentTime={currentTime} />
         </div>
     );
 };
@@ -28,8 +25,6 @@ App.propTypes = {
     addTodo : PropTypes.func.isRequired,
     deleteTodo : PropTypes.func.isRequired,
     toggleDone : PropTypes.func.isRequired,
-    changeTime : PropTypes.func.isRequired,
-    currentTime: PropTypes.object.isRequired
 }
 
 const MemoizedApp = React.memo(App)
